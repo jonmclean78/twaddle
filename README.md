@@ -47,9 +47,9 @@ When the app is able to get information from twitter, I will then be able to fin
 
 You require git, node, and npm:
 
-'git clone https://github.com/rawonjon/twaddle.git'
-'cd twaddle'
-'npm install'
-'npm start`
+`git clone https://github.com/rawonjon/twaddle.git
+cd twaddle
+npm install
+npm start`
 	
 
