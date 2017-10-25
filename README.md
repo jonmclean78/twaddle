@@ -22,27 +22,34 @@ I would also have a header and a footer area to display other important informat
  * In the header, the name of the App and logo (Twaddle was inspired by my daughter's book, [Toddle Waddle](https://www.google.co.uk/search?q=toddle+waddle&oq=toddle+waddle&aqs=chrome..69i57.1893j0j7&sourceid=chrome&ie=UTF-8), which is about a game of follow the leader)
  * In the footer, my contact details / link to github repo
 
- With a basic layout and plan in place, I set about setting up the app with react and bootstrap.
+With a basic layout and plan in place, I set about setting up the app with react and bootstrap.
 
- ## Problems encountered
+## Problems encountered
 
- Initial problem with using React was keeping track of the state of the input. I wanted the twitter handle that was being searched for to automatically update in the User Information area, with the twitter @ symbol next to it. To do this, I was using `setState` to change the state as text was entered to the input.  However, `setState` is an asynchronous action which meant that the output always lagged one character behind the text input.  
+Initial problem with using React was keeping track of the state of the input. I wanted the twitter handle that was being searched for to automatically update in the User Information area, with the twitter @ symbol next to it. To do this, I was using `setState` to change the state as text was entered to the input.  However, `setState` is an asynchronous action which meant that the output always lagged one character behind the text input.  
 
- At this point, I probably should have simply altered the plan to update the state on the button submit, as this would have saved me some time.
+At this point, I probably should have simply altered the plan to update the state on the button submit, as this would have saved me some time.
 
- However, instead I installed redux and refactored my code to make the input stateless, updating initial state through a reducer.
+However, instead I installed redux and refactored my code to make the input stateless, updating initial state through a reducer.
 
- The second and more challenging problem encountered has been interacting with the Twitter API. Having obtained the necessary keys and tokens from the twitter dev site, I spent a good day trying to get these to work with both Postman and my app. Currently, the app makes a call to Twitter from the index.js page. Unfortuantely, due to the fact that the Twitter API does not currently support CORS, I get a 400 error in response.  Despite trying to find a workaround for this, the actual solution appears to be that I need to write my own API using Laravel and Guzzle to act as a 'middleman' between my app and the twitter api.  This would also help to write data to a mysql database, as required by the brief.
+The second and more challenging problem encountered has been interacting with the Twitter API. Having obtained the necessary keys and tokens from the twitter dev site, I spent a good day trying to get these to work with both Postman and my app. Currently, the app makes a call to Twitter from the index.js page. Unfortuantely, due to the fact that the Twitter API does not currently support CORS, I get a 400 error in response.  Despite trying to find a workaround for this, the actual solution appears to be that I need to write my own API using Laravel and Guzzle to act as a 'middleman' between my app and the twitter api.  This would also help to write data to a mysql database, as required by the brief.
 
- ## Where to go from here
+## Where to go from here
 
- This is a tough challenge but also a great learning exercise.  I am keen to complete it as I think it will be an excellent calling card for my abilities. 
+This is a tough challenge but also a great learning exercise.  I am keen to complete it as I think it will be an excellent calling card for my abilities. 
 
- While we covered creating an API using Laravel in the developme bootcamp, this is something I need to go over along with the guzzle integration.  I think this will take me a few more days. 
+While we covered creating an API using Laravel in the developme bootcamp, this is something I need to go over along with the guzzle integration.  I think this will take me a few more days. 
 
- When the app is able to get information from twitter, I will then be able to finish writing the logic that will map the returned object information to the relevant areas in the app.  With the program working, I will then complete the styling to improve the overall look.
+When the app is able to get information from twitter, I will then be able to finish writing the logic that will map the returned object information to the relevant areas in the app.  With the program working, I will then complete the styling to improve the overall look.
 
  
+# Install the current version
 
+You require git, node, and npm:
 
+'git clone https://github.com/rawonjon/twaddle.git
+cd twaddle
+npm install
+npm start`
+	
 
