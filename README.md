@@ -13,9 +13,7 @@ A simple app for obtaining a list of a specific twitter user's followers
 
 I started this project with some sketched wireframes for a one page web app, which I could then build with ReactJS.
 
-![alt text][initial wireframes]
-
-[initial wireframes]: https://github.com/rawonjon/twaddle/master/twaddle-wireframes.jpg "Initial Wireframes"
+![initial wireframes](https://github.com/rawonjon/twaddle/master/twaddle-wireframes.jpg "initial wireframes")
 
 The wireframe helped me to decide on the components that would be needed for the app to function.  The essential idea was that the user could enter a twitter name in the input **(1)**, which would then update the and then click on the 'Get Followers' button **(2)** which would then trigger to GET calls to the API.  One of these calls would return the User information, including the profile image, full name and twitter bio, which be displayed in the Username area **(3)**.  The list of returned followers would then be displayed on the right hand side of the page **(4)**.
 
@@ -24,7 +22,7 @@ I would also have a header and a footer area to display other important informat
  * In the header, the name of the App and logo (Twaddle was inspired by my daughter's book, [Toddle Waddle](https://www.google.co.uk/search?q=toddle+waddle&oq=toddle+waddle&aqs=chrome..69i57.1893j0j7&sourceid=chrome&ie=UTF-8), which is about a game of follow the leader)
  * In the footer, my contact details / link to github repo
 
- With the 
+ With a basic layout and plan in place, I set about setting up the app with react and bootstrap.
 
  ## Problems encountered
 
