@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import logo from '../twaddle.png';
+import logo from '../twaddle.png';
 import '../App.css';
 
 import Input from '../containers/Input';
@@ -14,7 +14,7 @@ class App extends Component {
       <div className="App">
         
         <header className="App-header">
-          
+          <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Twaddle</h1>
         </header>
         
@@ -23,19 +23,18 @@ class App extends Component {
         </div>
       
         <div className="col-md-8">
-          <p className="App-intro">        
-            Followers List:
-          </p>
+        	<p className="App-intro">        
+            	Followers List:
+        	</p>
           
-          <div className="well">
-          </div>
-        
+        	<div className="well">
+        	</div>
         </div>    
+        
+	</div>
 
-      </div>
     );
   }
 }
 
 export default App;
-// <img src={logo} className="App-logo" alt="logo" />
