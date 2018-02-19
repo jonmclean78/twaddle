@@ -1,15 +1,15 @@
 import { connect } from "react-redux";
 import Followers from "../components/Followers";
-import { fetchFollowers } from "../data/actions/api"
+//import { fetchFollowers } from "../data/actions/api"
 
 const mapStateToProps = state => ({
-    loading: !state.get("loaded"),
-    followers: state.get("followers"),
+    users: state.get("users"),
+    //followers: state.get("followers"),
 });
 
 
 const mapDispatchToProps = (dispatch) => ({
-    onMount: () => dispatch(fetchFollowers()),
+    //onMount: () => dispatch(fetchFollowers()),
 });
 
-export default connect(mapDispatchToProps)(Followers);
+export default connect(mapStateToProps, mapDispatchToProps)(Followers);

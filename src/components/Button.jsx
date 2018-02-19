@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export default ({ onClick}) => (
+export default ({ username, onClick}) => (
     <button 
         className={ "btn btn-primary" }
         onClick={onClick}
@@ -8,3 +8,5 @@ export default ({ onClick}) => (
         Get Twitter Followers
     </button>
 );
+
+

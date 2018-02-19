@@ -11,16 +11,23 @@ import axios from "./data/axios";
 
 //This is all the redux stuff
 
-import { createStore, compose } from "redux";
+import { createStore, compose, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
 import state from "./data/reducer";
+import thunk from "redux-thunk";
 
 // required for redux devtools
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-const store = createStore(state, composeEnhancers());
+const store = createStore(
+  state,
+  // window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose,
+  applyMiddleware(thunk)
+);
 
-axios.get("/1.1/followers/list.json?screen_name=jonmclean");
+// axios.post("/", { 
+// 	query: "/1.1/followers/list.json?screen_name=kfc"
+// });
 
 
 

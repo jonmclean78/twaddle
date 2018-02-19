@@ -26,8 +26,8 @@ class App extends Component {
         	<p className="App-intro">        
             	Followers List:
         	</p>
-          
         	<div className="well">
+            <Followers />
         	</div>
         </div>    
         

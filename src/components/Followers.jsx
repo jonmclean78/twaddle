@@ -4,16 +4,17 @@ import Loader from "./Loader"
 class Followers extends Component {
 	componentDidMount()
     {
-        this.props.onMount();
+        //this.props.onMount();
     }
+    componentWillUpdate(nextProps){
+                console.log(nextProps.users)
 
+    }
     render () {
-    	let { loading, titles } = this.props;
-
-        return loading ? <Loader /> : (
-            <div>
-                     <p>No articles found</p>
-            </div>
+    	let { users } = this.props;
+        //console.log('mounted')
+        return typeof users == 'undefined' ? 'No Users' : users.map(u =>
+            <div key={u}>{u.name}</div>
         );
     }
 }
