@@ -32,18 +32,22 @@ At this point, I probably should have simply altered the plan to update the stat
 
 However, instead I installed redux and refactored my code to make the input stateless, updating initial state through a reducer.
 
-The second and more challenging problem encountered has been interacting with the Twitter API. Having obtained the necessary keys and tokens from the twitter dev site, I spent a good day trying to get these to work with both Postman and my app. Currently, the app makes a call to Twitter from the index.js page. Unfortuantely, due to the fact that the Twitter API does not currently support CORS, I get a 400 error in response.  Despite trying to find a workaround for this, the actual solution appears to be that I need to write my own API using Laravel and Guzzle to act as a 'middleman' between my app and the twitter api.  This would also help to write data to a mysql database, as required by the brief.
+The second and more challenging problem encountered was interacting with the Twitter API. Having obtained the necessary keys and tokens from the twitter dev site, I spent a good day trying to get these to work with both Postman and my app.  Unfortuantely, due to the fact that the Twitter API does not currently support CORS, I got a 400 error in response.  The solution was to write my own API using Laravel and Guzzle which would to act as a 'middleman' between my app and the twitter api.  This would also help to write data to a mysql database, as required by the brief.
 
-## Where to go from here
+## The current version
 
-This is a tough challenge but also a great learning exercise.  I am keen to complete it as I think it will be an excellent calling card for my abilities. 
+With the API up and running, the app now works.  You can enter a username, press the submit button and the request is made via the Laravel app to Twitter.  A list of the last 20 names to follow that user is returned and these appear on screen.
 
-While we covered creating an API using Laravel in the developme bootcamp, this is something I need to go over along with the guzzle integration.  I think this will take me a few more days. 
+## Things still to do
 
-When the app is able to get information from twitter, I will then be able to finish writing the logic that will map the returned object information to the relevant areas in the app.  With the program working, I will then complete the styling to improve the overall look.
+- sort out the styling
+- add some more functionality, eg, options to display different information, add profile pictures of followers, a 'show more' button to load the next twenty followers...
+- would be good to write the information received from twitter to my own database, in order to prevent hitting the twitter rate limit
+- get a working version up online
 
- 
 # Install the current version
+
+First, go and install the Twaddle-API from here: https://github.com/rawonjon/twaddle-api.  
 
 You require git, node, and npm:
 
